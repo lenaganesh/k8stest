@@ -1,9 +1,7 @@
 // Jenkinsfile for MBP Build Process
 def envAsString = '' // set as global variable
 pipeline {
-  agent {
-    label "docker-build-java-agent"
-  }
+  agent any
   environment {
     description = "Multi Branch Build Process"
   }
