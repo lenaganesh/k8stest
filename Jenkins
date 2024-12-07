@@ -1,0 +1,44 @@
+// Jenkinsfile for MBP Build Process
+def envAsString = '' // set as global variable
+pipeline {
+  agent {
+    label "docker-build-java-agent"
+  }
+  environment {
+    description = "Multi Branch Build Process"
+  }
+  stages {
+
+    stage("Build APS Home - ACM") {
+      steps {
+        sh "pwd"
+        sh "ls -l"
+        sh "ls -l ../"
+        sh "hostname"
+        echo "$PATH"
+        sh "java -version"
+        sh "mvn -version"
+        script {
+          envAsString = getEnvAsSring()
+          echo "Env As String"
+          echo "The Env sum is ${envAsString}"
+          APS_COMPONENT_TO_BUILD = './'
+          build job: "build-starter", wait: true, parameters: [
+            [$class: 'StringParameterValue', name: 'APS_COMPONENT_TITLE_TO_BUILD', value: "K8s Test Java"],
+            [$class: 'StringParameterValue', name: 'APS_COMPONENT_TO_BUILD', value: "aps-home-acm"],
+            [$class: 'StringParameterValue', name: 'PARENT_ENV', value: "${envAsString}"]
+          ]
+        }
+      }
+    }
+  }
+}
+def getEnvAsSring() {
+  def envAsStringTemp = ''
+  sh 'env > env.txt'
+  def list = readFile('env.txt').readLines()
+  list.each {
+    envAsStringTemp = envAsStringTemp + it + '\r\n'
+  }
+  return envAsStringTemp
+}
