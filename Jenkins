@@ -15,7 +15,6 @@ pipeline {
         sh "hostname"
         echo "$PATH"
         sh "java -version"
-        sh "mvn -version"
         script {
           envAsString = getEnvAsSring()
           echo "Env As String"
