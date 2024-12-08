@@ -21,8 +21,8 @@ pipeline {
           echo "The Env sum is ${envAsString}"
           APS_COMPONENT_TO_BUILD = './'
           build job: "build-starter", wait: true, parameters: [
-            [$class: 'StringParameterValue', name: 'APS_COMPONENT_TITLE_TO_BUILD', value: "K8s Test Java"],
-            [$class: 'StringParameterValue', name: 'APS_COMPONENT_TO_BUILD', value: "aps-home-acm"],
+            [$class: 'StringParameterValue', name: 'COMPONENT_TITLE_TO_BUILD', value: "K8s Test Java"],
+            [$class: 'StringParameterValue', name: 'COMPONENT_TO_BUILD', value: "aps-home-acm"],
             [$class: 'StringParameterValue', name: 'PARENT_ENV', value: "${envAsString}"]
           ]
         }
