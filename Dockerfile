@@ -19,7 +19,7 @@ EXPOSE 8080
 RUN ./mvnw clean package -DskipTests
 
 # Copy the JAR file into the container
-COPY target/demo-0.0.1-SNAPSHOT.pom app.jar
+COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
 
 # Define the command to run your Spring Boot application
 CMD ["java", "-jar", "app.jar"]
