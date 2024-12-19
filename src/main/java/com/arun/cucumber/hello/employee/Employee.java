@@ -2,8 +2,8 @@ package com.arun.cucumber.hello.employee;
 
 import java.time.LocalDate;
 import java.util.List;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +13,7 @@ public class Employee {
 
   private Long id;
 
-  @NotEmpty
+  @jakarta.validation.constraints.NotEmpty
   private String firstName;
 
   @NotEmpty

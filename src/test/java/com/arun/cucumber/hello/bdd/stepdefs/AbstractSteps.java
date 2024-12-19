@@ -1,13 +1,13 @@
 package com.arun.cucumber.hello.bdd.stepdefs;
 
+import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import com.arun.cucumber.hello.bdd.CucumberTestContext;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import java.util.Map;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.web.server.LocalServerPort;
 
 /**
  * Class that abstract test context management and REST API invocation.
