@@ -19,7 +19,7 @@ EXPOSE 8080
 #RUN ./mvnw clean package -DskipTests
 
 # Copy the JAR file into the container
-COPY target/hello-springboot-cucumber-1.0.0.jar app.jar
+COPY target/${JAR_FILE_NAME} ${JAR_FILE_NAME}
 
 # Define the command to run your Spring Boot application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "${JAR_FILE_NAME}"]
