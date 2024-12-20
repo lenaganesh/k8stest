@@ -10,7 +10,7 @@ import io.cucumber.spring.CucumberContextConfiguration;
 
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("com/sevolutivo/demo/cucumber/features")
+//@SelectClasspathResource("com/sevolutivo/demo/cucumber/features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.sevolutivo.demo.cucumber.stepDefs")
 @CucumberContextConfiguration
 @SpringBootTest
