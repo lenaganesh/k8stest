@@ -1,13 +1,13 @@
-package com.sevolutivo.demo;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootCucumberApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCucumberApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
