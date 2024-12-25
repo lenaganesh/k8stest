@@ -216,7 +216,7 @@
                             <param>**/*.json</param>
                         </jsonFiles>-->
 					<generatedHtmlReportDirectory>
-						${project.build.directory}/generated-report
+						${project.build.directory}/cucumber-report
 					</generatedHtmlReportDirectory>
 					<customParameters>
 						<_Text>This report shows the results of acceptance tests
