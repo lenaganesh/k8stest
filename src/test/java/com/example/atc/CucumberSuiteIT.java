@@ -17,7 +17,7 @@ import io.cucumber.java.Before;
 
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.example.atc")
 
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,  value="pretty, json:target/cucumber-execution.json")//"${plugin_property_name}"): tried this not working
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,  value="pretty,html:target/cucumber, json:target/cucumber-execution.json")//"${plugin_property_name}"): tried this not working
 //@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "not @Skip")
 
 
